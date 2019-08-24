@@ -21,6 +21,7 @@ const ProjectList = () => {
         <p>Posted by Hari Doshi</p>
         <p className="grey-text">3rd September, 2am</p>
       </div>
+      <div className="test">test</div>
     </div>
   );
 };
