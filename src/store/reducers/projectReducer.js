@@ -17,7 +17,6 @@ const projectReducer = (state = initState, action) => {
     default:
       return state;
   }
-  console.log(test);
 };
 
 export default projectReducer;
