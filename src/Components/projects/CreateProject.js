@@ -6,7 +6,8 @@ import { Redirect } from "react-router-dom";
 class CreateProject extends Component {
   state = {
     title: "",
-    content: ""
+    content: "",
+    redirectToReferrer: false
   };
 
   handleChange = e => {
@@ -19,10 +20,12 @@ class CreateProject extends Component {
     e.preventDefault();
     console.log(this.state);
     this.props.createProject(this.state);
+    this.props.history.push("/");
   };
 
   render() {
     const { auth } = this.props;
+    const { redirectToReferrer } = this.state;
     if (!auth.uid) return <Redirect to="/signin" />;
 
     return (
