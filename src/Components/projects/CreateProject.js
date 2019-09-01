@@ -26,6 +26,7 @@ class CreateProject extends Component {
     const { auth } = this.props;
     if (!auth.uid) return <Redirect to="/signin" />;
 
+    console.log("test");
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit} className="white">
